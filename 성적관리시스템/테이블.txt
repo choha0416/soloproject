@@ -1,0 +1,15 @@
+select * from usersc;
+
+CREATE TABLE scores (
+    user_id VARCHAR2(50) PRIMARY KEY, -- 유저 ID를 기본 키로 설정
+    user_grade NUMBER(5) NOT NULL, -- 학년
+    subject1_grade VARCHAR2(50) NOT NULL, -- 첫 번째 과목과 성적 (예: "수학: 4.0")
+    subject2_grade VARCHAR2(50) NOT NULL, -- 두 번째 과목과 성적
+    subject3_grade VARCHAR2(50) NOT NULL, -- 세 번째 과목과 성적
+    subject4_grade VARCHAR2(50) NOT NULL, -- 네 번째 과목과 성적
+    average_score NUMBER CHECK (average_score >= 0 AND average_score <= 4.5) -- 평균 점수
+);
+
+select * from scores;
+
+    
