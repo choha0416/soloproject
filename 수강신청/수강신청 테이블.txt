@@ -1,0 +1,30 @@
+유저
+CREATE TABLE users_m (
+    user_id NUMBER PRIMARY KEY,  -- 고유 식별자 (학번)
+    name VARCHAR2(255) NOT NULL,               -- 사용자 이름
+    user_id_field VARCHAR2(255) NOT NULL UNIQUE, -- 사용자 아이디 (유니크)
+    email VARCHAR2(255) NOT NULL UNIQUE,       -- 이메일 (유니크)
+    password VARCHAR2(255) NOT NULL,           -- 비밀번호
+    role VARCHAR2(20) DEFAULT 'student' CHECK (role IN ('student', 'admin'))  -- 역할 (기본값: 학생, 제한: 'student' 또는 'admin')
+);
+
+강의
+CREATE TABLE courses_m (
+    course_id NUMBER PRIMARY KEY,  -- 강의 고유 ID
+    course_name VARCHAR2(255) NOT NULL,          -- 강의명
+    course_code VARCHAR2(50) NOT NULL UNIQUE,    -- 강의 코드 (예: CS101)
+    course_description CLOB,                     -- 강의 설명
+    professor VARCHAR2(255)                     -- 교수명
+);
+
+수강신청
+CREATE TABLE enrollments_m (
+    enrollment_id NUMBER PRIMARY KEY,  -- 수강신청 고유 ID
+    user_id NUMBER,                    -- 학생 ID (users 테이블의 user_id)
+    course_id NUMBER,                  -- 강의 ID (courses 테이블의 course_id)
+    enrollment_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP, -- 신청 날짜
+    CONSTRAINT fk_user FOREIGN KEY (user_id) REFERENCES users(user_id),    -- 학생 ID 외래키
+    CONSTRAINT fk_course FOREIGN KEY (course_id) REFERENCES courses(course_id) -- 강의 ID 외래키
+);
+
+
