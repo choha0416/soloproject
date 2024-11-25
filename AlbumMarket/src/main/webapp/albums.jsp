@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css"><meta charset="utf-8">
  
 <meta charset="utf-8">
-<title>앨범 목록</title>
+<title>음반 목록</title>
 </head>
 <body>
 	<div class="container py-4">
@@ -18,7 +18,7 @@
 		
 		<div class="p-5 mb-4 bg-body-tertiary rounded-3">
 			<div class="container-fluid py-5">
-				<h1 class="display-5 fw-bold">앨범 목록</h1>
+				<h1 class="display-5 fw-bold">음반 목록</h1>
 				<p class="col-md-8 fs-4">AlbumList</p>
 			</div>
 		</div>
