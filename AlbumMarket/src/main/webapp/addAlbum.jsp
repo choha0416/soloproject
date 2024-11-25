@@ -21,9 +21,15 @@
 			<div class="row align-items-md-stretch">
 				<form name="newAlbum" action="./processAddAlbum.jsp" method="post">
 					<div class="mb-3 row">
-						<label class="col-sm-2">음반코드</label>
+						<label class="col-sm-2">음반 코드</label>
 						<div class="col-sm-3">
 							<input type="text" name="albumId" class="form-control">
+						</div>
+					</div>
+					<div class="mb-3 row">
+						<label class="col-sm-2">음반 이름</label>
+						<div class="col-sm-3">
+							<input type="text" name="name" class="form-control">
 						</div>
 					</div>
 					<div class="mb-3 row">
@@ -52,7 +58,7 @@
 					</div>
 					
 					<div class="mb-3 row">
-						<label class="col-sm-2">앨범설명</label>
+						<label class="col-sm-2">음반 설명</label>
 						<div class="col-sm-5">
 							<textarea name="description" cols="50" row="2" class="form-control" placeholder="100자 이상 적어주세요"></textarea>
 						</div>
@@ -64,7 +70,7 @@
 						</div>
 					</div>
 					<div class="mb-3 row">
-						<label class="col-sm-2">재고수</label>
+						<label class="col-sm-2">재고 수</label>
 						<div class="col-sm-3">
 							<input type="text" name="unitInStock" class="form-control">
 						</div>

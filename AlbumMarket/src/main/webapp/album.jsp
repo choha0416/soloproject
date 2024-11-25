@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8" isELIgnored="false"%>
 <%@ page import="dto.Album" %>
+<%@ page import="dao.AlbumRepository" %>
 <jsp:useBean id="AlbumDAO" class="dao.AlbumRepository" scope="session"/>
 <!DOCTYPE html>
 <html>
@@ -21,7 +22,8 @@
 		</div>	
 		<%
 			String id = request.getParameter("id");
-			Album album = AlbumDAO.getAlbumById(id);
+			AlbumRepository dao = AlbumRepository.getInstance();
+			Album album = dao.getAlbumById(id);
 		%>
 		<div class = "row align-items-md-stretch">
 			<div class="col-md-12">
