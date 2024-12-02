@@ -1,0 +1,30 @@
+CREATE TABLE album (
+    a_id VARCHAR2(30) NOT NULL PRIMARY KEY,
+    a_name VARCHAR2(50),
+    a_unitPrice INTEGER,
+    a_singer VARCHAR2(50),
+    a_desciption CLOB,
+    a_publisher VARCHAR2(50),
+    a_category VARCHAR2(50),
+    a_unitsInStock NUMBER,
+    a_releaseDate VARCHAR2(50),
+    a_condition VARCHAR2(50),
+    a_fileName VARCHAR2(50)
+);
+
+select * from usersc;
+
+DELETE FROM album
+WHERE a_id = 'ISANBD1113';
+
+INSERT INTO album VALUES('IASNHZ1106','FALLIN''',20000,'헤이즈(Heize)','"떨어뜨린 것을 주우려 몸을 숙이다 남아있던 작은 조각들마저 왈칵 쏟아져 버릴 때, 반드시 기억해 내야한다. 오직 붙잡을 수 있는 것은 내 마음 하나뿐이라는 걸."',
+'지니뮤직, Stone Music Entertainment', '발라드,알앤비/소울',2000,'2024/11/06','New','ISANHZ1106.jpg');
+
+INSERT INTO album VALUES('ISANBD1113','Blue Ocean',15000,'이바다(LEEBADA))','"저는 사람이 인생을 살아가며 우정을 나누고 사랑하게 되는 일련의 과정들이, 어쩌면 그림을 그리는 것과 비슷하다고 생각해요. 아름다운 수채화, 그 위에 표현된 그림들은 누가 그리는 가에 따라 같은 꽃이라도 느낌이 다르고, 누가 보느냐에 따라 느끼는 감정들이 다른 것처럼, 이별과 사랑, 그리고 삶을 통해 경험한 이야기 들을 슬프지만 아름답게 담아내고 싶었어요"',
+'(주)뮤직카우, NUPLAY', '발라드,알앤비/소울',2000,'2018/11/13','New','ISANBD1113.jpg');
+
+INSERT INTO album VALUES('ISANRT1105','너의 계절이 돌아올거야',13000,'로시(Rothy)','"너의 계절이 돌아올거야" 라는 제목으로 발매된 이 노래는 그동안 김이나와의 호흡을 통해 웰-메이드 노래를 발표한 로시가 또 다른 최고의 작사가인 심현보와 호흡을 맞춰 또 다른 위안의 메시지를 전달할 예정이다.',
+'카카오엔터테인먼트', '발라드',2000,'2023/11/05','New','ISANRT1105.jpg');
+
+
+766p
